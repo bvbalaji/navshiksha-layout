@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, X } from "lucide-react"
 
 import { BrandLogo } from "@/components/brand-logo"
 
@@ -93,8 +93,8 @@ export function Footer() {
               <Facebook className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground">
-              <span className="sr-only">Twitter</span>
-              <Twitter className="h-5 w-5" />
+              <span className="sr-only">X (formerly Twitter)</span>
+              <X className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground">
               <span className="sr-only">Instagram</span>
