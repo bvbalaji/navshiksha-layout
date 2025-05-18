@@ -228,7 +228,7 @@ export default function AdvancedPersonalTutorPage() {
                   <Button
                     key={index}
                     variant="outline"
-                    className="w-full justify-start text-sm"
+                    className="w-full justify-start text-sm text-wrap border-2 gap-3 pt-5 pb-5"
                     onClick={() => setInputValue(question)}
                   >
                     {question}
@@ -394,9 +394,8 @@ const recentFiles = [
 ]
 
 const suggestedQuestions = [
-  "Explain the concept of quantum entanglement",
-  "How does Einstein's theory of relativity work?",
-  "What are neural networks and how do they function?",
+  "Explain the concept of quantum entanglement", 
+  "Explain Einstein's theory of relativity?",
   "Explain the process of photosynthesis in detail",
   "What is the significance of DNA replication?",
 ]
