@@ -33,7 +33,7 @@ export function Header() {
   // Get the appropriate avatar component based on user type
   const AvatarComponent = () => {
     if (isStudentPage) return <StudentAvatar />
-    if (isTeacherPage) return <TeacherAvatar className="bg-orange"/>
+    if (isTeacherPage) return <TeacherAvatar />
     if (isAdminPage) return <AdminAvatar />
     return <DefaultAvatar />
   }
@@ -77,11 +77,10 @@ export function Header() {
 
           {isLoggedIn ? (
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
+              <DropdownMenuTrigger asChild>                
+                <div>
                   <AvatarComponent />
-                  <span className="sr-only">User menu</span>
-                </Button>
+                </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <div className="flex items-center justify-start gap-2 p-2">
@@ -144,8 +143,8 @@ export function Header() {
               {isLoggedIn ? (
                 <>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="h-10 w-10">
-                      <AvatarComponent className="h-10 w-10" />
+                    <div className="h-16 w-16">
+                      <AvatarComponent />
                     </div>
                     <div>
                       <p className="font-medium">{getUserRole()} Account</p>

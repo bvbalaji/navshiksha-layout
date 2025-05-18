@@ -3,21 +3,18 @@
 import type React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { BookOpen, Calendar, LineChart, MessageSquare, Settings, Star, User } from "lucide-react"
+import { BookOpen, Calendar, LineChart, MessageSquare, Star, User } from "lucide-react"
 
 import { BrandLogo } from "@/components/brand-logo"
-import { Button } from "@/components/ui/button"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
 } from "@/components/ui/sidebar"
-import { CustomSidebarTrigger } from "@/components/custom-sidebar-trigger"
 
 export default function StudentLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -72,7 +69,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
           <SidebarContent className="p-2 bg-green-50">
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
+                <SidebarMenuItem key={item.href} className={pathname === item.href ? 'border-2 border-indigo-500/35' : ''}>
                   <SidebarMenuButton asChild isActive={pathname === item.href} tooltip={item.title}>
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
@@ -83,7 +80,6 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
               ))}
             </SidebarMenu>
           </SidebarContent>
-          
         </Sidebar>
         <div className="flex-1 bg-green-100">          
           <main className="p-6">{children}</main>

@@ -10,28 +10,19 @@ import {
   LayoutDashboard,
   PenToolIcon as Tool,
   Settings,
-  Shield,
   Users,
 } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { BrandLogo } from "@/components/brand-logo"
 import {
   Sidebar,
   SidebarHeader,
   SidebarContent,
-  SidebarFooter,
   SidebarProvider,
-  SidebarMobile,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-  SidebarMobileTrigger,
-  SidebarMobileClose,
 } from "@/components/ui/sidebar"
-import { CustomSidebarTrigger } from "@/components/custom-sidebar-trigger"
-
 interface AdminLayoutProps {
   children: ReactNode
 }
@@ -96,7 +87,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           <SidebarContent>
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
+                <SidebarMenuItem key={item.href} className={pathname === item.href ? 'border-2 border-indigo-500/35' : ''}>
                   <SidebarMenuButton asChild isActive={pathname === item.href} tooltip={item.label}>
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
