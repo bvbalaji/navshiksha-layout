@@ -1,0 +1,94 @@
+"use client"
+
+import type React from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { BookOpen, Calendar, LineChart, MessageSquare, Settings, Star, User } from "lucide-react"
+
+import { BrandLogo } from "@/components/brand-logo"
+import { Button } from "@/components/ui/button"
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
+import { CustomSidebarTrigger } from "@/components/custom-sidebar-trigger"
+
+export default function StudentLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+
+  const navItems = [
+    {
+      title: "Dashboard",
+      href: "/student/dashboard",
+      icon: User,
+    },
+    {
+      title: "My Courses",
+      href: "/student/my-courses",
+      icon: BookOpen,
+    },
+    {
+      title: "My Progress",
+      href: "/student/my-progress",
+      icon: LineChart,
+    },
+    {
+      title: "Upcoming Classes",
+      href: "/student/upcoming-classes",
+      icon: Calendar,
+    },
+    {
+      title: "Feedback",
+      href: "/student/feedback",
+      icon: Star,
+    },
+    {
+      title: "Personal Tutor",
+      href: "/student/personal-tutor",
+      icon: MessageSquare,
+    },
+    {
+      title: "Advanced Personal Tutor",
+      href: "/student/advanced-personal-tutor",
+      icon: MessageSquare,
+    },
+  ]
+
+  return (
+    <SidebarProvider>
+      <div className="flex min-h-[calc(100vh-4rem)]">
+        {" "}
+        {/* Adjust height to account for header */}
+        <Sidebar className="border-r bg-green-50">
+          <SidebarHeader className="border-b p-4 bg-green-50">
+            <BrandLogo />
+          </SidebarHeader>
+          <SidebarContent className="p-2 bg-green-50">
+            <SidebarMenu>
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.href}>
+                  <SidebarMenuButton asChild isActive={pathname === item.href} tooltip={item.title}>
+                    <Link href={item.href}>
+                      <item.icon className="h-5 w-5" />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarContent>
+          
+        </Sidebar>
+        <div className="flex-1 bg-green-100">          
+          <main className="p-6">{children}</main>
+        </div>
+      </div>
+    </SidebarProvider>
+  )
+}
