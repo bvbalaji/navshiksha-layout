@@ -5,7 +5,6 @@ import type React from "react"
 import { useState } from "react"
 import { Send } from "lucide-react"
 
-import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -68,7 +67,6 @@ export default function PersonalTutorPage() {
           <Card className="h-[calc(100vh-16rem)]">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <BrandLogo className="h-8" />
                 <div>
                   <CardTitle>Navshiksha AI Tutor</CardTitle>
                   <CardDescription>Ask questions about your courses or get help with homework</CardDescription>

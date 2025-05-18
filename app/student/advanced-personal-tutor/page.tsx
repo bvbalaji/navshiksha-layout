@@ -5,7 +5,6 @@ import type React from "react"
 import { useState } from "react"
 import { BookOpen, FileText, ImageIcon, Mic, MicOff, Paperclip, Send, Video } from "lucide-react"
 
-import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -77,7 +76,6 @@ export default function AdvancedPersonalTutorPage() {
           <Card className="h-[calc(100vh-16rem)]">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <BrandLogo className="h-8" />
                 <div>
                   <CardTitle>Advanced Navshiksha AI Tutor</CardTitle>
                   <CardDescription>Capable of handling complex topics and multimedia inputs</CardDescription>
