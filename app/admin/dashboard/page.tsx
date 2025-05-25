@@ -1,9 +1,13 @@
+"use client"
+import React, { useState } from "react"
 import { BarChart3, BookOpen, CheckCircle, Clock, DollarSign, FileText, TrendingUp, Users } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function AdminDashboardPage() {
+  const [activeTab, setActiveTab] = useState("overview")
+
   return (
     <div className="h-full p-6 space-y-6">  
         <span>
@@ -68,14 +72,14 @@ export default function AdminDashboardPage() {
         </Card>
       </div>
 
-      <Tabs defaultValue="overview" className="space-y-4">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList>
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="analytics">Analytics</TabsTrigger>
           <TabsTrigger value="reports">Reports</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <TabsContent value="overview" className="space-y-4">
+        <TabsContent value="overview" className=" space-y-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
             <Card className="col-span-4">
               <CardHeader>
@@ -83,7 +87,7 @@ export default function AdminDashboardPage() {
                 <CardDescription>User engagement over the last 30 days</CardDescription>
               </CardHeader>
               <CardContent className="pl-2">
-                <div className="h-[300px] flex items-center justify-center bg-muted/20 rounded-md">
+                <div className="flex items-center justify-center rounded-md">
                   <BarChart3 className="h-16 w-16 text-muted-foreground/50" />
                 </div>
               </CardContent>
@@ -213,36 +217,42 @@ export default function AdminDashboardPage() {
             </Card>
           </div>
         </TabsContent>
-        <TabsContent value="analytics" className="h-[400px] flex items-center justify-center bg-muted/20 rounded-md">
-          <div className="text-center">
-            <BarChart3 className="h-16 w-16 mx-auto text-muted-foreground/50" />
-            <h3 className="mt-4 text-lg font-medium">Analytics Dashboard</h3>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
-              Detailed analytics and reporting tools to track platform performance, user engagement, and revenue
-              metrics.
-            </p>
-          </div>
+        <TabsContent value="analytics" className=" flex items-center justify-center rounded-md">
+         <div className="w-full rounded-lg bg-card text-card-foreground shadow-sm">
+            <div className="text-center p-6">
+              <BarChart3 className="h-16 w-16 mx-auto text-muted-foreground/50" />
+              <h3 className="mt-4 text-lg font-medium">Analytics Dashboard</h3>
+              <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
+                Detailed analytics and reporting tools to track platform performance, user engagement, and revenue
+                metrics.
+              </p>
+            </div>
+         </div>          
         </TabsContent>
-        <TabsContent value="reports" className="h-[400px] flex items-center justify-center bg-muted/20 rounded-md">
-          <div className="text-center">
-            <FileText className="h-16 w-16 mx-auto text-muted-foreground/50" />
-            <h3 className="mt-4 text-lg font-medium">Reports Center</h3>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
-              Generate and schedule custom reports on user activity, course performance, and financial metrics.
-            </p>
-          </div>
+        <TabsContent value="reports" className="flex items-center justify-center rounded-md">
+           <div className="w-full rounded-lg bg-card text-card-foreground shadow-sm">
+              <div className="text-center p-6">
+                <FileText className="h-16 w-16 mx-auto text-muted-foreground/50" />
+                <h3 className="mt-4 text-lg font-medium">Reports Center</h3>
+                <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
+                  Generate and schedule custom reports on user activity, course performance, and financial metrics.
+                </p>
+              </div>
+           </div>
         </TabsContent>
         <TabsContent
           value="notifications"
-          className="h-[400px] flex items-center justify-center bg-muted/20 rounded-md"
+          className="flex items-center justify-center rounded-md"
         >
-          <div className="text-center">
-            <Clock className="h-16 w-16 mx-auto text-muted-foreground/50" />
-            <h3 className="mt-4 text-lg font-medium">System Notifications</h3>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
-              View and manage system alerts, maintenance schedules, and important platform updates.
-            </p>
-          </div>
+          <div className="w-full rounded-lg bg-card text-card-foreground shadow-sm">
+              <div className="p-6 text-center">
+                <Clock className="h-16 w-16 mx-auto text-muted-foreground/50" />
+                <h3 className="mt-4 text-lg font-medium">System Notifications</h3>
+                <p className="text-sm text-muted-foreground max-w-md mx-auto mt-2">
+                  View and manage system alerts, maintenance schedules, and important platform updates.
+                </p>
+              </div>
+          </div>          
         </TabsContent>
       </Tabs>
     </div>
