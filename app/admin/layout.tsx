@@ -76,7 +76,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-[calc(100vh-4rem)]">
+      <div className="flex w-full min-h-[calc(100vh-4rem)]">
         {" "}
         {/* Adjust height to account for header */}
       
