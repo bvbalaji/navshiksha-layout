@@ -377,7 +377,7 @@ export default function LandingPage() {
                 <CardHeader>
                   <CardTitle>Free</CardTitle>
                   <div className="mt-4 flex items-baseline text-5xl font-bold">
-                    ₹0<span className="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+                    ₹0<span className="ml-1 text-xl font-normal text-muted-foreground">/ month</span>
                   </div>
                   <CardDescription className="mt-4">
                     Perfect for students looking for basic support in specific subjects.
@@ -414,7 +414,7 @@ export default function LandingPage() {
                     </span>
                   </div>
                   <div className="mt-4 flex items-baseline text-5xl font-bold">
-                    ₹1499<span className="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+                    ₹1499<span className="ml-1 text-xl font-normal text-muted-foreground">/ month</span>
                   </div>
                   <CardDescription className="mt-4">
                     Comprehensive support for students serious about academic excellence.
@@ -454,7 +454,7 @@ export default function LandingPage() {
                 <CardHeader>
                   <CardTitle>Platinum</CardTitle>
                   <div className="mt-4 flex items-baseline text-5xl font-bold">
-                    ₹3499<span className="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+                    ₹3499<span className="ml-1 text-xl font-normal text-muted-foreground">/ month</span>
                   </div>
                   <CardDescription className="mt-4">
                     The complete package for students aiming for top academic performance.
@@ -548,9 +548,9 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="border-b pb-4">
-                  <h3 className="text-xl font-semibold mb-2">Is there a free trial available?</h3>
+                  <h3 className="text-xl font-semibold mb-2">Is there a free tier available?</h3>
                   <p className="text-muted-foreground">
-                    Yes, we offer a 7-day free trial for all new users. You can explore the platform, try the AI tutor,
+                    Yes, we offer a free tier for all new users. You can explore the platform, try the AI tutor,
                     and access limited course content before deciding on a subscription plan.
                   </p>
                 </div>
