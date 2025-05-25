@@ -8,11 +8,7 @@ import { FileText,  ListChecks, Video } from "lucide-react"
 export default function DraftsTab() {
   return (
     <div>
-      {/* Your Drafts tab content here */}
-      <h2 className="text-xl font-semibold mb-4">Draft Content</h2>
-      {/* ... */}
-     
-         <Card value="drafts">
+         <Card>
             <CardHeader>
                 <CardTitle>Draft Content</CardTitle>
                 <CardDescription>Content you've saved but not yet published</CardDescription>

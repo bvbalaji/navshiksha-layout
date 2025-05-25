@@ -12,9 +12,6 @@ export default function CreateNewTab() {
   const [contentType, setContentType] = useState<string>("lesson")
   return (
     <div>
-      {/* Your Drafts tab content here */}
-      <h2 className="text-xl font-semibold mb-4">Create New Content</h2>
-      {/* ... */}
       <Card>
             <CardHeader>
                 <CardTitle>Content Type</CardTitle>

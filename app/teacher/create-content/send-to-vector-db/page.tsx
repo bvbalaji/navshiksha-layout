@@ -33,9 +33,6 @@ export default function SendToVectorDBTab() {
   
     return (
     <div>
-      {/* Your Drafts tab content here */}
-      <h2 className="text-xl font-semibold mb-4">Send to Vector DB</h2>
-      {/* ... */}
       <Card>
             <CardHeader>
                 <CardTitle>Send Content to Vector DB</CardTitle>
