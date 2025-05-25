@@ -5,7 +5,6 @@ import { Header } from "@/components/header"
 export default function NotFound() {
   return (
     <>
-      <Header />
       <div className="container flex flex-col items-center justify-center min-h-[calc(100vh-3.5rem)] py-12 text-center">
         <div className="mx-auto flex max-w-[800px] flex-col items-center justify-center space-y-4">
           <div className="relative h-60 w-60 text-muted-foreground">

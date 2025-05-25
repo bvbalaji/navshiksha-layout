@@ -109,7 +109,7 @@ const PersonalTutor = () => {
                 Refine Prompt
               </Button>
               <Button type="submit" disabled={loading || evaluating || !prompt || !evaluation}>
-                {loading ? 'Generating...' : 'Generate'}
+                {loading ? 'Fetching the answer...' : 'Get Answer'}
               </Button>
               <Button
                 type="button"
