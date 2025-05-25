@@ -261,8 +261,6 @@ export default function LandingPage() {
                 <p className="text-muted-foreground">
                   Create your account and complete a brief assessment to identify your learning needs and goals.
                 </p>
-                {/* Connector line for desktop */}
-                <div className="hidden md:block absolute top-8 left-[calc(100%-8px)] w-full h-0.5 bg-primary/30"></div>
               </div>
               <div className="relative flex flex-col items-center text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-4">
@@ -271,9 +269,7 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold mb-2">Personalized Learning Plan</h3>
                 <p className="text-muted-foreground">
                   Receive a customized study plan based on your assessment results and learning objectives.
-                </p>
-                {/* Connector line for desktop */}
-                <div className="hidden md:block absolute top-8 left-[calc(100%-8px)] w-full h-0.5 bg-primary/30"></div>
+                </p>                
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-4">
