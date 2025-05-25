@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, BookOpen, Brain, CheckCircle, Clock, Lightbulb, MessageSquare, Star, Users } from "lucide-react"
+import { ArrowRight, BookOpen, Brain, CheckCircle, Clock, Lightbulb, MessageSquare, Star, Users, X } from "lucide-react"
 
 import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
@@ -379,9 +379,9 @@ export default function LandingPage() {
             <div className="grid gap-8 md:grid-cols-3">
               <Card>
                 <CardHeader>
-                  <CardTitle>Basic</CardTitle>
+                  <CardTitle>Free</CardTitle>
                   <div className="mt-4 flex items-baseline text-5xl font-bold">
-                    ₹499<span className="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+                    ₹0<span className="ml-1 text-xl font-normal text-muted-foreground">/month</span>
                   </div>
                   <CardDescription className="mt-4">
                     Perfect for students looking for basic support in specific subjects.
@@ -395,15 +395,15 @@ export default function LandingPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="mr-2 h-4 w-4 text-primary" />
-                      <span>5 subjects</span>
+                      <span>1 subject</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="mr-2 h-4 w-4 text-primary" />
+                      <X className="mr-2 h-4 w-4 text-primary" />
                       <span>Progress tracking</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="mr-2 h-4 w-4 text-primary" />
-                      <span>100 AI tutor questions/month</span>
+                      <span>5 AI tutor questions/month</span>
                     </li>
                   </ul>
                   <Button className="mt-6 w-full">Get Started</Button>
