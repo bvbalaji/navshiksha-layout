@@ -49,7 +49,7 @@ export default function TeacherLayout({ children }: { children: React.ReactNode 
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-[calc(100vh-4rem)]">
+      <div className="flex w-full min-h-[calc(100vh-4rem)]">
         {" "}
         {/* Adjust height to account for header */}
         <Sidebar className="border-r bg-yellow-50">

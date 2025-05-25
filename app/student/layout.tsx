@@ -50,16 +50,11 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
       href: "/student/personal-tutor",
       icon: MessageSquare,
     },
-    {
-      title: "Advanced Personal Tutor",
-      href: "/student/advanced-personal-tutor",
-      icon: MessageSquare,
-    },
   ]
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-[calc(100vh-4rem)]">
+      <div className="flex w-full h-full">
         {" "}
         {/* Adjust height to account for header */}
         <Sidebar className="border-r bg-green-50">
