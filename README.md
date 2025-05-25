@@ -14,7 +14,7 @@
 
 ### Teacher Content Tools
 - Teachers can create, draft, publish, and send content to a vector database for semantic search.
-- The "Send to Vector DB" tab includes animated progress for each processing stage.
+- The "Send to Vector DB" tab includes Content pre-processing, chunking, embedding and pushing to Vector DB for searchable custom content with ML capabilities.
 
 ### Component Library
 - `components/ui/` contains a comprehensive set of reusable UI components (buttons, cards, dialogs, tabs, etc.), styled with Tailwind CSS.
