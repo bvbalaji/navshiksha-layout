@@ -64,8 +64,8 @@ export default function TeacherLayout({ children }: { children: React.ReactNode 
           <SidebarContent className="p-2 bg-yellow-50">
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.href} className={pathname === item.href ? 'border-2 border-indigo-500/35' : ''}>
-                  <SidebarMenuButton asChild isActive={pathname === item.href} tooltip={item.title}>
+                <SidebarMenuItem key={item.href} className={pathname.startsWith(item.href)? 'border-2 border-indigo-500/35' : ''}>
+                  <SidebarMenuButton asChild isActive={pathname.startsWith(item.href)} tooltip={item.title}>
                     <Link href={item.href}>
                       <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
