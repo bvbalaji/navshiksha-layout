@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react"
-import { BarChart3, BookOpen, CheckCircle, Clock, DollarSign, FileText, TrendingUp, Users } from "lucide-react"
+import { BarChart3, BookOpen, CheckCircle, Clock, FileText, IndianRupee, TrendingUp, Users } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -60,7 +60,7 @@ export default function AdminDashboardPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            <IndianRupee className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">₹42,580</div>
